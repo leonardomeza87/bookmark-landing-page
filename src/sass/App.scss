@@ -1,3 +1,5 @@
-.app {
-  display: flex;
-}
+// SCSS Components are imported here
+
+@use "./base/colors";
+
+@use "./components/header";

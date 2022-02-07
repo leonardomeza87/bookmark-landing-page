@@ -1,11 +1,14 @@
 import "./sass/App.css";
 
+import Header from "./components/Header";
+
 function App() {
   return (
-    <main className="app">
-      <p>Hola</p>
-      <h2>viva chavez!!!!!!!!</h2>
-    </main>
+    <div className="app">
+      <Header />
+
+      {/* Components */}
+    </div>
   );
 }
 
