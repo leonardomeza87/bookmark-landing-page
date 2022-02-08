@@ -1,4 +1,4 @@
-import "./sass/App.css";
+import "./sass/App.scss";
 
 import Header from "./components/Header";
 import Features from "./components/Features";

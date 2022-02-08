@@ -1,11 +1,7 @@
-<<<<<<< HEAD
-body {
-  margin: 0;
-}
-=======
 // SCSS Components are imported here
 
 @use "./base/colors";
 
 @use "./components/header";
->>>>>>> f7c0143c497833c8a1538ce4a576ca3d5db12908
+
+@use './components/features'
