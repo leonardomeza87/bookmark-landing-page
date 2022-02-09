@@ -1,0 +1,12 @@
+.blue-square {
+  height: 200px;
+  width: 295px;
+  background: var(--soft-blue);
+}
+
+@media screen and (min-width: 800px) {
+  .blue-square {
+    width: 650px;
+    height: 350px;
+  }
+}
