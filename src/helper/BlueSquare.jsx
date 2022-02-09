@@ -1,9 +1,7 @@
-import React from 'react'
+import React from "react";
 
 const BlueSquare = () => {
-  return (
-    <div className='blue-square'></div>
-  )
-}
+  return <div className="blue-square"></div>;
+};
 
-export default BlueSquare
+export default BlueSquare;
