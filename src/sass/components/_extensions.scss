@@ -1,0 +1,66 @@
+.extension-container {
+  text-align: center;
+  padding: 0 32px;
+  padding-top: 100px;
+  max-width: 375px;
+  margin: auto;
+}
+
+.extension-details {
+  h3 {
+    font-size: 1.55rem;
+    font-weight: 500;
+    color: var(--very-dark-blue);
+  }
+  p {
+    margin-top: 15px;
+    line-height: 26px;
+    color: var(--grayish-blue);
+  }
+}
+
+.browsers-container {
+  padding-top: 40px;
+}
+
+.dots {
+  width: 100%;
+}
+
+.button-container {
+  padding: 0 23px;
+  margin-top: 22px;
+  button {
+    width: 100%;
+    padding: 15px 0;
+    font-family: inherit;
+    font-weight: 500;
+    border: none;
+    background: var(--soft-blue);
+    color: #fff;
+    border-radius: 5px;
+  }
+}
+
+.browser {
+  box-shadow: 0 6px 7px 3px rgba(0, 0, 0, 0.068);
+  margin: 30px 0;
+  border-radius: 11px;
+  padding-top: 40px;
+  padding-bottom: 23px;
+}
+
+.mini-info {
+  margin-top: 27px;
+  margin-bottom: 24px;
+  h4 {
+    color: var(--very-dark-blue);
+    font-weight: 600;
+    margin-bottom: 10px;
+    font-size: 1.14rem;
+  }
+  span {
+    color: var(--grayish-blue);
+    font-size: 0.9rem;
+  }
+}

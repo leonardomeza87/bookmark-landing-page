@@ -2,8 +2,10 @@
 
 @use "./base/colors";
 
+@use "./components/blueSquare";
+
 @use "./components/header";
 
 @use "./components/features";
 
-@use "./components/blueSquare";
+@use "./components/extensions";

@@ -1,14 +1,44 @@
-import React, { useState } from "react";
+import React, { useMemo, useState } from "react";
 import BlueSquare from "../helper/BlueSquare";
 import Tab1 from "../images/illustration-features-tab-1.svg";
 import Tab2 from "../images/illustration-features-tab-2.svg";
 import Tab3 from "../images/illustration-features-tab-3.svg";
 
+const initialDb = [
+  {
+    title: "Bookmark in one click",
+    description: `Organize your bookmarks however you like. Our simple
+    drag-and-drop interface gives you complete control over how you
+    manage your favourite sites. More Info`,
+  },
+  {
+    title: "Intelligent search",
+    description: `Our powerful search feature will help you find saved sites in no
+    time at all. No need to trawl through all of your bookmarks.
+    More Info`,
+  },
+  {
+    title: "Share your bookmarks",
+    description: `Easily share your bookmarks and collections with others. Create
+    a shareable link that you can send at the click of a button.
+    More Info`,
+  },
+];
+
 const Features = () => {
   const [active, setActive] = useState("info1");
-  const handleChange = (e) => {
-    setActive(e.target.value);
+  const handleChange = (ab) => {
+    setActive(ab);
   };
+  const preload = useMemo(() => {
+    const images = [Tab1,Tab2,Tab3]
+    let pre = []
+    for (let i = 0; i < images.length; i++) {
+      pre[i] = new Image()
+      pre[i].src = images[i]
+    }
+    return pre
+  }, [])
   return (
     <div className="features-container">
       <div className="features-info">
@@ -22,7 +52,7 @@ const Features = () => {
         </div>
         <div className="slider-selector">
           <ul>
-            <li>
+            <li onClick={() => handleChange("info1")}>
               <label htmlFor="slider1">Simple Bookmarking</label>
               <div
                 className={`orange-underline ${
@@ -30,7 +60,7 @@ const Features = () => {
                 }`}
               ></div>
             </li>
-            <li>
+            <li onClick={() => handleChange("info2")}>
               <label htmlFor="slider2">Speedy Searching</label>
               <div
                 className={`orange-underline ${
@@ -38,7 +68,7 @@ const Features = () => {
                 }`}
               ></div>
             </li>
-            <li>
+            <li onClick={() => handleChange("info3")}>
               <label htmlFor="slider3">Easy Sharing</label>
               <div
                 className={`orange-underline ${
@@ -51,61 +81,39 @@ const Features = () => {
       </div>
       <div className="slider-background">
         <BlueSquare />
-        <div className="slider-features-container">
-          <div className="inner-slider">
-            <input
-              type="radio"
-              name="slider-radio"
-              id="slider1"
-              value={"info1"}
-              onChange={handleChange}
-            />
-            <input
-              type="radio"
-              name="slider-radio"
-              id="slider2"
-              value={"info2"}
-              onChange={handleChange}
-            />
-            <input
-              type="radio"
-              name="slider-radio"
-              id="slider3"
-              value={"info3"}
-              onChange={handleChange}
-            />
-
-            <div className="slide one-s">
-              <img src={Tab1} alt="tab 1" />
-              <h3>Bookmark in one click</h3>
-              <p>
-                Organize your bookmarks however you like. Our simple
-                drag-and-drop interface gives you complete control over how you
-                manage your favourite sites. More Info
-              </p>
+        {active === "info1" && (
+          <div className="card">
+            <div className="image-card-container">
+              <img src={preload[0].src} alt="reference" />
             </div>
-            <div className="slide two-s">
-              <img src={Tab2} alt="tab 2" />
-              <h3>Intelligent search</h3>
-              <p>
-                {" "}
-                Our powerful search feature will help you find saved sites in no
-                time at all. No need to trawl through all of your bookmarks.
-                More Info
-              </p>
-            </div>
-            <div className="slide three-s">
-              <img src={Tab3} alt="tab 3" />
-              <h3>Share your bookmarks</h3>
-              <p>
-                {" "}
-                Easily share your bookmarks and collections with others. Create
-                a shareable link that you can send at the click of a button.
-                More Info
-              </p>
+            <div className="card-detailed">
+              <h3>{initialDb[0].title}</h3>
+              <p>{initialDb[0].description}</p>
             </div>
           </div>
-        </div>
+        )}
+        {active === "info2" && (
+          <div className="card">
+            <div className="image-card-container">
+              <img src={preload[1].src} alt="reference" />
+            </div>
+            <div className="card-detailed two-last">
+              <h3>{initialDb[1].title}</h3>
+              <p>{initialDb[1].description}</p>
+            </div>
+          </div>
+        )}
+        {active === "info3" && (
+          <div className="card">
+            <div className="image-card-container">
+              <img src={preload[2].src} alt="reference" />
+            </div>
+            <div className="card-detailed two-last">
+              <h3>{initialDb[2].title}</h3>
+              <p>{initialDb[2].description}</p>
+            </div>
+          </div>
+        )}
       </div>
     </div>
   );

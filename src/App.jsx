@@ -2,6 +2,7 @@ import "./sass/App.scss";
 
 import Header from "./components/Header";
 import Features from "./components/Features";
+import Extensions from "./components/Extensions";
 
 function App() {
   return (
@@ -9,6 +10,7 @@ function App() {
       {/* Main Components */}
       <Header />
       <Features />
+      <Extensions />
     </div>
   );
 }
