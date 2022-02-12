@@ -38,8 +38,14 @@
     border: none;
     background: var(--soft-blue);
     color: #fff;
-    border-radius: 5px;
+    border-radius: 3px;
+    border: 2px solid var(--soft-blue);
     cursor: pointer;
+    transition: all 0.15s ease-in;
+  }
+  button:hover {
+    background: #fff;
+    color: var(--soft-blue);
   }
 }
 
