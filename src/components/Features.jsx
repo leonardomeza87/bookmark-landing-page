@@ -9,19 +9,19 @@ const initialDb = [
     title: "Bookmark in one click",
     description: `Organize your bookmarks however you like. Our simple
     drag-and-drop interface gives you complete control over how you
-    manage your favourite sites. More Info`,
+    manage your favourite sites.`,
   },
   {
     title: "Intelligent search",
     description: `Our powerful search feature will help you find saved sites in no
     time at all. No need to trawl through all of your bookmarks.
-    More Info`,
+  `,
   },
   {
     title: "Share your bookmarks",
     description: `Easily share your bookmarks and collections with others. Create
     a shareable link that you can send at the click of a button.
-    More Info`,
+  `,
   },
 ];
 
@@ -31,14 +31,14 @@ const Features = () => {
     setActive(ab);
   };
   const preload = useMemo(() => {
-    const images = [Tab1,Tab2,Tab3]
-    let pre = []
+    const images = [Tab1, Tab2, Tab3];
+    let pre = [];
     for (let i = 0; i < images.length; i++) {
-      pre[i] = new Image()
-      pre[i].src = images[i]
+      pre[i] = new Image();
+      pre[i].src = images[i];
     }
-    return pre
-  }, [])
+    return pre;
+  }, []);
   return (
     <div className="features-container">
       <div className="features-info">
@@ -89,6 +89,7 @@ const Features = () => {
             <div className="card-detailed">
               <h3>{initialDb[0].title}</h3>
               <p>{initialDb[0].description}</p>
+              <button className="btn-dsk">More Info</button>
             </div>
           </div>
         )}
@@ -100,6 +101,7 @@ const Features = () => {
             <div className="card-detailed two-last">
               <h3>{initialDb[1].title}</h3>
               <p>{initialDb[1].description}</p>
+              <button className="btn-dsk">More Info</button>
             </div>
           </div>
         )}
@@ -111,6 +113,7 @@ const Features = () => {
             <div className="card-detailed two-last">
               <h3>{initialDb[2].title}</h3>
               <p>{initialDb[2].description}</p>
+              <button className="btn-dsk">More Info</button>
             </div>
           </div>
         )}

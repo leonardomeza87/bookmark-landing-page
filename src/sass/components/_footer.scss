@@ -17,6 +17,7 @@
         font-weight: 100;
         margin: 28px 0;
         font-size: 00.9rem;
+        letter-spacing: 1px;
     }
 }
 
@@ -25,5 +26,30 @@
     justify-content: center;
     img {
         margin: 0 18px;
+    }
+}
+
+@media screen and (min-width: 800px) {
+    .footer-container {
+        display: flex;
+        justify-content: space-between;
+        padding: 30px 150px;
+        padding-right: 80px;
+    }
+    .footer-menu {
+        display: flex;
+        margin-top: 0;
+        align-items: center;
+        margin-left: 37px;
+        h4 {
+            margin: 0 24px;
+        }
+    }
+    .details-footer {
+        display: flex;
+    }
+    .social-media-footer img {
+        width: 25px;
+        object-fit: contain;
     }
 }

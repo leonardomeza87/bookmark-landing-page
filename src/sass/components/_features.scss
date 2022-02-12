@@ -112,9 +112,14 @@
   padding-top: 58px;
 }
 
+.btn-dsk {
+  display: none;
+}
+
 @media screen and (min-width: 400px) {
-  .blue-square {
-    height: 248px;
+  .features-container .blue-square {
+    height: 230px;
+    border-radius: 0 200px 200px 0;
   }
 }
 
@@ -126,13 +131,17 @@
     }
     li {
       padding: 0 30px;
+      cursor: pointer;
+    }
+    label {
+      cursor: pointer;
     }
   }
   .slider-selector li:first-child {
     border-top: none;
   }
   .features-info {
-    max-width: 700px;
+    max-width: 750px;
   }
   .orange-underline {
     width: 100%;
@@ -144,6 +153,73 @@
     max-width: 450px;
     margin-left: auto;
     margin-right: auto;
+  }
+  .card {
+    display: flex;
+    max-width: 750px;
+  }
+  .image-card-container, .card-detailed {
+    flex-basis: 50%;
+  }
+  .btn-dsk {
+    display: block;
+  }
+  .features-container .blue-square {
+    width: 45%;
+    height: 270px;
+  }
+  .image-card-container img {
+    max-height: 290px;
+    position: relative;
+    top: -20px;
+  }
+  .slider-background {
+    height: 286px;
+    margin-top: 80px;
+  }
+  .card-detailed {
+    padding: 20px 60px;
+    padding-right: 0;
+    text-align: left;
+    p {
+      margin-bottom: 25px;
+      margin-top: 20px;
+    }
+  }
+  .btn-dsk {
+    width: 100px;
+    height: 43px;
+    font-family: inherit;
+    border: none;
+    background: var(--soft-blue);
+    color: #fff;
+    border-radius: 3.5px;
+    cursor: pointer;
+  }
+}
+
+@media screen and (min-width: 1020px) {
+  .card {
+    max-width: 1000px;
+  }
+  .features-info {
+    max-width: 800px;
+  }
+  .slider-selector {
+    li {
+      padding: 0 50px;
+      cursor: pointer;
+    }
+  }
+  .some-info {
+    max-width: 500px;
+  }
+  .card-detailed {
+    margin-left: 40px;
+    min-width: 500px;
+  }
+  .features-container .blue-square {
+    width: 40%;
   }
 }
 

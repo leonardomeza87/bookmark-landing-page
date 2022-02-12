@@ -39,6 +39,7 @@
     background: var(--soft-blue);
     color: #fff;
     border-radius: 5px;
+    cursor: pointer;
   }
 }
 
@@ -62,5 +63,44 @@
   span {
     color: var(--grayish-blue);
     font-size: 0.9rem;
+  }
+}
+
+
+@media screen and (min-width: 800px) {
+  .browsers-container {
+    display: flex;
+    height: 500px;
+    align-items: center;
+    margin-bottom: 60px;
+  }
+  .extension-container {
+    max-width: 800px;
+  }
+  .browser:not(:first-child) {
+    margin-left: 15px;
+  }
+  .browser:not(:last-child) {
+    margin-right: 15px;
+  }
+  .browser:first-child {
+    align-self: flex-start;
+  }
+  .browser:last-child {
+    align-self: flex-end;
+  }
+  .extension-details {
+    max-width: 450px;
+    margin: auto;
+  }
+}
+
+@media screen and (min-width: 1020px) {
+  .extension-container {
+    max-width: 1000px;
+  }
+  .extension-details {
+    max-width: 500px;
+    margin: auto;
   }
 }
