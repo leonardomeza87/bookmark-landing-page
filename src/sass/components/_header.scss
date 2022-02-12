@@ -118,7 +118,6 @@ header {
             transition: color 0.2s ease-in-out;
 
             &:hover {
-              transition: none;
               color: var(--grayish-blue-b);
             }
           }
@@ -138,7 +137,6 @@ header {
             transition-timing-function: ease-in-out;
 
             &:hover {
-              transition: none;
               background-color: #fff;
               color: var(--very-dark-blue);
             }
@@ -163,7 +161,6 @@ header {
       cursor: pointer;
 
       &:hover {
-        transition: none;
         background-color: rgba($color: #000, $alpha: 0.1);
       }
 
