@@ -1,0 +1,29 @@
+.footer-container {
+    background-color: var(--very-dark-blue-b);
+    text-align: center;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+.logo-container svg g path {
+   fill: #fff;
+}
+
+.footer-menu {
+    text-transform: uppercase;
+    color: #fff;
+    margin-top: 34px;
+    h4 {
+        font-weight: 100;
+        margin: 28px 0;
+        font-size: 00.9rem;
+    }
+}
+
+.social-media-footer {
+    display: flex;
+    justify-content: center;
+    img {
+        margin: 0 18px;
+    }
+}
