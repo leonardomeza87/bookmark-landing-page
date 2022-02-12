@@ -6,9 +6,19 @@ import { ReactComponent as Close } from "../images/icon-close.svg";
 
 const Header = () => {
   const [menuIsOpen, setMenuIsOpen] = useState(false);
+  const [menuIsHidden, setMenuIsHidden] = useState(true);
 
   const toggleMenu = () => {
-    setMenuIsOpen(!menuIsOpen);
+    if (menuIsOpen) {
+      setMenuIsOpen(false);
+
+      setTimeout(() => {
+        setMenuIsHidden(true);
+      }, 200);
+    } else {
+      setMenuIsHidden(false);
+      setMenuIsOpen(true);
+    }
   };
 
   return (
@@ -18,7 +28,11 @@ const Header = () => {
           <Logo />
         </div>
 
-        <div className={`menu ${menuIsOpen ? "visible" : ""}`}>
+        <div
+          className={`menu ${menuIsOpen ? "visible" : ""} ${
+            menuIsHidden ? "hidden" : ""
+          }`}
+        >
           <ul>
             <li>
               <button className="link">Features</button>

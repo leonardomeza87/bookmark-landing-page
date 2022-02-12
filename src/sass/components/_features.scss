@@ -71,13 +71,15 @@
   height: 3px;
 }
 
-.blue-square {
-  position: absolute;
-  height: 178px;
-  width: 68%;
-  top: 33px;
-  left: 0;
-  border-radius: 0 100px 100px 0;
+.features-container {
+  .blue-square {
+    position: absolute;
+    height: 178px;
+    width: 68%;
+    top: 33px;
+    left: 0;
+    border-radius: 0 100px 100px 0;
+  }
 }
 
 .card {
