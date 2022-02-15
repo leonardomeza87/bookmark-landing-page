@@ -3,11 +3,16 @@
   margin-bottom: 10px;
 
   &.active {
-    .drop-question svg {
-      transform: rotateZ(180deg);
+    .drop-question {
+      p {
+        color: var(--soft-red);
+      }
+      svg {
+        transform: rotateZ(180deg);
 
-      path {
-        stroke: var(--soft-red);
+        path {
+          stroke: var(--soft-red);
+        }
       }
     }
 
@@ -26,12 +31,19 @@
     padding: 12px 0;
     cursor: pointer;
 
+    &:hover {
+      p {
+        color: var(--soft-red);
+      }
+    }
+
     p {
       font-size: 15px;
       line-height: 20px;
       color: var(--very-dark-blue);
       text-align: left;
       max-width: calc(100% - 28px);
+      transition: color 0.2s ease-in-out;
     }
 
     svg {

@@ -24,38 +24,38 @@ const Header = () => {
   return (
     <header>
       <div className={`container ${menuIsOpen ? "triggered" : ""}`}>
-        <div className="logo">
-          <Logo />
+        <div className="inner-container">
+          <div className="logo">
+            <Logo />
+          </div>
+          <div
+            className={`menu ${menuIsOpen ? "visible" : ""} ${
+              menuIsHidden ? "hidden" : ""
+            }`}
+          >
+            <ul>
+              <li>
+                <button className="link">Features</button>
+              </li>
+              <li>
+                <button className="link">Pricing</button>
+              </li>
+              <li>
+                <button className="link">Contact</button>
+              </li>
+              <li>
+                <button className="login">Login</button>
+              </li>
+            </ul>
+          </div>
+          <button
+            className={`menu-opener ${menuIsOpen ? "active" : ""}`}
+            onMouseUp={toggleMenu}
+          >
+            <Hamburger className="hamburger" />
+            <Close className="close" />
+          </button>
         </div>
-
-        <div
-          className={`menu ${menuIsOpen ? "visible" : ""} ${
-            menuIsHidden ? "hidden" : ""
-          }`}
-        >
-          <ul>
-            <li>
-              <button className="link">Features</button>
-            </li>
-            <li>
-              <button className="link">Pricing</button>
-            </li>
-            <li>
-              <button className="link">Contact</button>
-            </li>
-            <li>
-              <button className="login">Login</button>
-            </li>
-          </ul>
-        </div>
-
-        <button
-          className={`menu-opener ${menuIsOpen ? "active" : ""}`}
-          onMouseUp={toggleMenu}
-        >
-          <Hamburger className="hamburger" />
-          <Close className="close" />
-        </button>
       </div>
     </header>
   );

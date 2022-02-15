@@ -40,7 +40,7 @@
     justify-content: center;
     font-size: 1.1rem;
     position: relative;
-    transition: color 0.1s ease-in;
+    transition: color 0.2s ease-in-out;
   }
   li:hover {
     color: var(--soft-red);
@@ -162,7 +162,8 @@
     display: flex;
     max-width: 750px;
   }
-  .image-card-container, .card-detailed {
+  .image-card-container,
+  .card-detailed {
     flex-basis: 50%;
   }
   .btn-dsk {
@@ -194,11 +195,23 @@
     width: 100px;
     height: 43px;
     font-family: inherit;
-    border: none;
+    border: 2px solid transparent;
+    font-weight: 500;
+
     background: var(--soft-blue);
     color: #fff;
-    border-radius: 3.5px;
+    border-radius: 6px;
     cursor: pointer;
+
+    transition: background-color, color, border-color;
+    transition-duration: 0.2s;
+    transition-timing-function: ease-in-out;
+
+    &:hover {
+      background-color: #fff;
+      color: var(--soft-blue);
+      border-color: var(--soft-blue);
+    }
   }
 }
 

@@ -19,7 +19,7 @@
     font-size: 00.9rem;
     letter-spacing: 1px;
     cursor: pointer;
-    transition: color 0.1s ease-in-out;
+    transition: color 0.2s ease-in-out;
   }
   h4:hover {
     color: var(--soft-red);
@@ -65,8 +65,8 @@
 }
 
 @media screen and (min-width: 950px) {
-    .footer-container {
-      padding: 30px 150px;
-      padding-right: 80px;
-    }
+  .footer-container {
+    padding: 30px 150px;
+    padding-right: 80px;
+  }
 }

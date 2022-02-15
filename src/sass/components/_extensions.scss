@@ -38,7 +38,7 @@
     border: none;
     background: var(--soft-blue);
     color: #fff;
-    border-radius: 3px;
+    border-radius: 6px;
     border: 2px solid var(--soft-blue);
     cursor: pointer;
     transition: all 0.15s ease-in;
@@ -71,7 +71,6 @@
     font-size: 0.9rem;
   }
 }
-
 
 @media screen and (min-width: 800px) {
   .browsers-container {
