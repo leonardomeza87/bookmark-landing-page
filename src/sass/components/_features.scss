@@ -69,10 +69,9 @@
   height: 0px;
   background-color: var(--soft-red);
   transition: height 0.1s ease-in-out;
-}
-
-.show {
-  height: 3.5px;
+  &.show {
+    height: 3.5px;
+  }
 }
 
 .features-container {
