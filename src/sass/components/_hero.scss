@@ -33,6 +33,7 @@
       img {
         width: 100%;
         max-width: 350px;
+        color: rgb(235, 148, 33);
       }
     }
   }
@@ -73,7 +74,7 @@
       button {
         border: 2px solid transparent;
         border-radius: 6px;
-        padding: 1rem;
+        padding: 1rem 0.75rem;
         font-weight: 500;
         box-shadow: 0 4px 4px var(--button-shadow);
         font-size: 14px;
