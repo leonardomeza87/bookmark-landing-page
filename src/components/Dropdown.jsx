@@ -1,9 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 
 import { ReactComponent as IconArrow } from "../images/icon-arrow.svg";
 
 const Dropdown = ({ children }) => {
-  console.log(children);
+  const [isActive, setIsActive] = useState(false);
 
   let title, answer;
 
@@ -15,15 +15,26 @@ const Dropdown = ({ children }) => {
     }
   });
 
-  console.log(title, answer);
+  const handleClick = (e) => {
+    if (!isActive) {
+      setIsActive(true);
+      e.target.scrollIntoView({
+        block: "center",
+        behavior: "smooth",
+      });
+    } else {
+      setIsActive(false);
+    }
+  };
+
   return (
-    <div className="dropdown">
-      <button>
+    <div className={`dropdown ${isActive ? "active" : ""}`}>
+      <button className="drop-question" onMouseUp={handleClick}>
         <p>{title}</p>
 
         <IconArrow />
       </button>
-      <div className="content">
+      <div className="drop-answer">
         <p>{answer}</p>
       </div>
     </div>

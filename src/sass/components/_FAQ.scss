@@ -1,2 +1,60 @@
 .faq {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 0 32px;
+  width: 100%;
+  max-width: 542px;
+
+  margin: 8.5rem auto 4rem;
+
+  h2 {
+    margin-bottom: 18px;
+    font-size: 24px;
+    line-height: 30px;
+    font-weight: 500;
+    text-align: center;
+    color: var(--very-dark-blue);
+  }
+
+  > p {
+    margin-bottom: 3.75rem;
+    font-size: 15px;
+    line-height: 24px;
+    text-align: center;
+    color: var(--grayish-blue);
+  }
+
+  .dropdown-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+  }
+
+  .more-info {
+    margin-top: 2.25rem;
+
+    padding: 14px 1.5rem;
+    border: 2px solid transparent;
+    border-radius: 6px;
+    background-color: var(--soft-blue);
+    color: #fff;
+    font-weight: 500;
+    font-size: 14px;
+    cursor: pointer;
+    box-shadow: 0 4px 4px 0 var(--button-shadow);
+
+    transition-property: background-color, color, border-color;
+    transition-duration: 0.2s;
+    transition-timing-function: ease-in-out;
+
+    &:hover {
+      border-color: var(--soft-blue);
+      color: var(--soft-blue);
+      background-color: transparent;
+    }
+  }
 }

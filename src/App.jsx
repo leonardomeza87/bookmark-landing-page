@@ -6,6 +6,7 @@ import Extensions from "./components/Extensions";
 import Footer from "./components/Footer";
 import Hero from "./components/Hero";
 import FAQ from "./components/FAQ";
+import Mail from "./components/Mail";
 
 function App() {
   return (
@@ -15,7 +16,8 @@ function App() {
       <Hero />
       <Features />
       <Extensions />
-      {/* <FAQ /> */}
+      <FAQ />
+      <Mail />
       <Footer />
     </div>
   );
